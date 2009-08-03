@@ -84,6 +84,9 @@ namespace Sequence
     ClustalW(const AlignStream<T> & a) : AlignStream<T>(a)
     {
     }
+	ClustalW(const std::vector<T> & data) : AlignStream<T>(data)
+	{
+	}
     ~ClustalW(void)
     {}
     std::istream & read (std::istream & s);

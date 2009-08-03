@@ -123,7 +123,7 @@ namespace Sequence
   class RedundancyCom95;
   class WeightingScheme2;
   class WeightingScheme3;
-    class Comeron95 : boost::noncopyable
+    class Comeron95 : private boost::noncopyable
     {
     private:
       bool __2wasNULL,__3wasNULL,__red_was_NULL;

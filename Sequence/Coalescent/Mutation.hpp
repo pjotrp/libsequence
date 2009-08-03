@@ -16,14 +16,14 @@ namespace Sequence
     A value of 200 works well.
     \ingroup coalescent
   */
-  extern int MAX_SEGSITES;
+  int MAX_SEGSITES;
   /*! 
     @brief controls (re)allocation of simulated gametes
     You must define this in namespace Sequence in your program.
     A value of 100 works well
     \ingroup coalescent
   */
-  extern int MAX_SEGS_INC;
+  int MAX_SEGS_INC;
 
   /*!
     @brief an object to store simulated gametes

@@ -190,7 +190,16 @@ namespace Sequence
 	    */
   {
   }
-
+  marginal::marginal() :
+    beg(0),nsam(0),nnodes(0),tree(NULL)
+	/*!
+	 \param b beg
+	 \param ns nsam
+	 \param nn nnodes
+	 \param t tree
+	 */
+	{
+	}
   marginal::marginal(const int & b, const int & ns,
 		     const int & nn,
 		     const std::vector<node> & t) :
@@ -302,10 +311,10 @@ namespace Sequence
     return s;
   }
 
-  struct newick_stream_marginal_tree_impl
-  /*!
-    Implementation details of newick_stream_marginal_tree
-  */
+/*  struct newick_stream_marginal_tree_impl
+ 
+	//Implementation details of newick_stream_marginal_tree
+  
   {
     marginal::const_iterator mi;
     const int nsam;
@@ -317,7 +326,7 @@ namespace Sequence
     newick_stream_marginal_tree_impl(const marginal & m);
     newick_stream_marginal_tree_impl(const marginal * m);
     newick_stream_marginal_tree_impl(arg::const_iterator m);
-  };
+  };*/
 
   newick_stream_marginal_tree_impl::newick_stream_marginal_tree_impl(const marginal & m) :
     mi(m.begin()),nsam(m.nsam),

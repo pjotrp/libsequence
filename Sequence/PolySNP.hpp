@@ -79,7 +79,7 @@ namespace Sequence
   {
   class PolyTable;
   class _PolySNPImpl;
-  class PolySNP : boost::noncopyable
+  class PolySNP : private boost::noncopyable
     {
     private:
     protected:

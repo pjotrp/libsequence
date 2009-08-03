@@ -115,8 +115,8 @@ namespace Sequence
   template<typename T> class PolyTableSlice
   {
   private:
-    BOOST_STATIC_ASSERT( (boost::is_base_and_derived<
-			  Sequence::PolyTable,T>::value) );
+  //  BOOST_STATIC_ASSERT( (boost::is_base_and_derived<
+	//		  Sequence::PolyTable,T>::value) );
     mutable T currentSlice;
     typedef std::pair<PolyTable::const_site_iterator,
 		      PolyTable::const_site_iterator> range;

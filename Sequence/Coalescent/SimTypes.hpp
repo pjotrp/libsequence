@@ -195,6 +195,7 @@ namespace Sequence
     const_iterator end() const;
     reference operator[](const std::vector<node>::size_type &i);
     const_reference operator[](const std::vector<node>::size_type &i) const;
+	marginal();
     marginal(const int & b, const int & ns,const int & nn, 
 	     const std::vector<node> & tree);
     bool operator<(const marginal & rhs) const;
@@ -215,7 +216,19 @@ namespace Sequence
   typedef std::list<marginal> arg;
   std::ostream & operator<<(std::ostream & s, const marginal & m);
 
-  class newick_stream_marginal_tree_impl;
+  struct newick_stream_marginal_tree_impl
+	{
+		marginal::const_iterator mi;
+		const int nsam;
+		std::vector<int> left,right;
+		std::vector<node> tree;
+		void init();
+		std::ostream & parens( const int & noden,
+							  std::ostream & o) const;
+		newick_stream_marginal_tree_impl(const marginal & m);
+		newick_stream_marginal_tree_impl(const marginal * m);
+		newick_stream_marginal_tree_impl(arg::const_iterator m);
+	};	
   class newick_stream_marginal_tree
   {
   private:

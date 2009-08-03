@@ -247,7 +247,7 @@ namespace Sequence
           site_gapped = 0;
           for (size_t i = 0;  i < data.size ();  ++i)
             {
-              if (data[i][j] == '-')
+              if ((data[i].second)[j] == '-')
                 {
                   site_gapped = 1;
                   i = data.size();

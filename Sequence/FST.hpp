@@ -36,7 +36,7 @@ namespace Sequence
 {
   class PolyTable;
   class FSTimpl;
-  class FST : boost::noncopyable
+  class FST : private boost::noncopyable
   {
   private:
     void doCalcs(void) const;
